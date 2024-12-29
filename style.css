@@ -1,0 +1,219 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@400;700&display=swap');
+
+/* Style global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #1abc9c, #16a085);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Centrage et taille des médias */
+video, img {
+    display: block;
+    margin: 20px auto; /* Centrer horizontalement et ajouter un espace */
+    max-width: 50%; /* Taille maximale à 50% de la largeur de l'écran */
+    height: auto; /* Maintenir le ratio d'aspect */
+    border-radius: 10px; /* Optionnel : coins arrondis pour un design moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet élégant */
+}
+
+/* Ajustement de la vidéo d'arrière-plan */
+.background-video {
+    max-width: 50%; /* Occupe toute la largeur de l'écran */
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Barre de recherche */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    transition: transform 0.3s;
+}
+
+.search-container input:focus {
+    transform: scale(1.05);
+}
+
+.search-container button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.search-container button:hover {
+    color: #000;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.menu > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Sous-menu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.submenu li {
+    padding: 5px 20px;
+}
+
+.submenu a {
+    color: #333;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.submenu a:hover {
+    color: #1abc9c;
+}
+
+/* Apparition des sous-menus */
+.menu li:hover .submenu {
+    display: block;
+}
+
+/* Vidéo */
+.background-video {
+    width: 100%;
+    height: auto;
+    filter: brightness(80%);
+}
+
+/* Section d'accueil */
+.welcome {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.welcome h1 {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #1abc9c;
+    margin: 0 0 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section dictionnaire */
+.dictionary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.term {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.term:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.term h2 {
+    font-size: 1.5rem;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.term p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Section principale */
+main h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #16a085;
+}
